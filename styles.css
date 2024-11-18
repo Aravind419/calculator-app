@@ -1,0 +1,291 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background: linear-gradient(to bottom, #121212, #1e1e1e);
+    color: #f1f1f1;
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* History Section */
+.history-section {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+
+body.dark-mode .history-section {
+    background: #2e2e2e;
+}
+
+.history-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.history-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-section ul li {
+    margin: 15px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+body.dark-mode .history-section ul li {
+    background: #444;
+    color: #fff;
+}
+
+.history-section ul li:hover {
+    background-color: #ff6f61;
+    transform: scale(1.05);
+}
+
+.history-section ul li span {
+    font-size: 1rem;
+}
+
+#clearHistoryBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    border: none;
+    background: #ff6f61;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearHistoryBtn:hover {
+    background: #ff4d40;
+}
+
+/* Divider */
+.divider {
+    width: 5px;
+    background: #ddd;
+    cursor: ew-resize;
+    transition: background 0.2s;
+}
+
+.divider:hover {
+    background: #ff6f61;
+}
+
+/* Calculator */
+.calculator {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Display */
+.display {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: right;
+    border: none;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+body.dark-mode .display input {
+    background: #444;
+    color: #fff;
+}
+
+/* Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.buttons button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    background: #e0e0e0;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+.buttons .operator {
+    background: #ff8c00;
+}
+
+body.dark-mode .buttons .operator {
+    background: #ff9f45;
+}
+
+.buttons .function {
+    background: #aaa;
+}
+
+/* Theme controls */
+.theme-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dark-mode-toggle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #f1f1f1;
+}
+
+/* Footer (Copyright Static) */
+footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #aaa;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Remove blinking */
+body.dark-mode footer {
+    color: #ccc;
+}
+/* History Section */
+.history-section {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+
+body.dark-mode .history-section {
+    background: #2e2e2e;
+}
+
+.history-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.history-section .history-date {
+    margin-bottom: 20px;
+}
+
+.history-section .history-date h3 {
+    text-align: center;
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.history-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-section ul li {
+    margin: 15px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+body.dark-mode .history-section ul li {
+    background: #444;
+    color: #fff;
+}
+
+.history-section ul li:hover {
+    background-color: #ff6f61;
+    transform: scale(1.05);
+}
+
+.history-section ul li span {
+    font-size: 1rem;
+}
+
+#clearHistoryBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    border: none;
+    background: #ff6f61;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearHistoryBtn:hover {
+    background: #ff4d40;
+}
+
+/* Remove blinking for copyright */
+body.dark-mode footer {
+    color: #ccc;
+}

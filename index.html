@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- History Section -->
+        <aside class="history-section">
+            <h2>History</h2>
+            <ul id="historyList"></ul>
+            <button id="clearHistoryBtn" onclick="clearHistory()">Clear History</button>
+        </aside>
+
+        <!-- Divider between History and Calculator -->
+        <div class="divider" id="divider"></div>
+
+        <!-- Calculator Section -->
+        <main class="calculator">
+            <div class="header">
+                <h1>Modern Calculator</h1>
+                <!-- Dark Mode Button -->
+                <div class="theme-controls">
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                </div>
+            </div>
+
+            <div class="display">
+                <input type="text" id="inputField" placeholder="0">
+            </div>
+
+            <div class="buttons">
+                <!-- Numbers and Operators -->
+                <button onclick="press('7')">7</button>
+                <button onclick="press('8')">8</button>
+                <button onclick="press('9')">9</button>
+                <button class="operator" onclick="press('/')">÷</button>
+
+                <button onclick="press('4')">4</button>
+                <button onclick="press('5')">5</button>
+                <button onclick="press('6')">6</button>
+                <button class="operator" onclick="press('*')">×</button>
+
+                <button onclick="press('1')">1</button>
+                <button onclick="press('2')">2</button>
+                <button onclick="press('3')">3</button>
+                <button class="operator" onclick="press('-')">−</button>
+
+                <button onclick="press('0')">0</button>
+                <button onclick="press('.')">.</button>
+                <button onclick="calculate()" class="equals">=</button>
+                <button class="operator" onclick="press('+')">+</button>
+
+                <!-- Clear, Delete -->
+                <button class="function" onclick="clearDisplay()">C</button>
+                <button class="function" onclick="deleteLast()">DEL</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer (Copyright Blinking) -->
+    <footer id="copyrightFooter">
+        <p>© 2024 K. Aravind. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
